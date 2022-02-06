@@ -1,14 +1,19 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1 style="text-align:center"><FONT SIZE=6>Posts</font></h1>
+<p style="text-align:right"> <%= link_to "New post", new_post_path %> </p>
 
 <div id="posts">
-  <% @posts.each do |post| %>
+
+  <% @posts.reverse.each do |post| %>
     <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
+    <p style="text-align:right">
+      <%= link_to "Show this post", post %> 
+        </br>
     </p>
+    </br>
+     </br>
   <% end %>
 </div>
 
-<%= link_to "New post", new_post_path %>
+

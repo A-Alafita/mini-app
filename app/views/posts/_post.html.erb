@@ -1,5 +1,6 @@
 <div id="<%= dom_id post %>">
-  <p>
+  <p style="text-align:center"><FONT SIZE=7>★</font></p>
+   <p>
     <strong>Title:</strong>
     <%= post.title %>
   </p>
@@ -11,26 +12,30 @@
   
 
  <p>
-  <strong>Image data:</strong>
-  <%= image_tag post.image_url if post.image %>
+   <% if  post.image %>
+    <strong>Image data:</strong>
+    <%= image_tag post.image_url%>
+    </br>
+    <%end%>
 </p>
-<h2>Comments</h2>
+
+<h1 style="text-align:center"><FONT SIZE=5>Comentarios:</font></h1>
 <% post.comment.each do |comment| %>
   
   <p>
-    <strong>Comment:</strong>
+    <strong style="text-align:center">Comment:</strong>
     <%= comment.body %>
   </p>
 <% end %>
 
-<h2>Add a comment:</h2>
+<h2 style="text-align:center">Add a comment:</h2>
 <%= form_for([post, post.comment.build]) do |f| %>
-  <p>
-    <%= f.label :body %><br />
+  <p style="text-align:center">
     <%= f.text_area :body %>
   </p>
-  <p>
+  <p style="text-align:center">
     <%= f.submit %>
   </p>
+   
 <% end %>
 </div>
