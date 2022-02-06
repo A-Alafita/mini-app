@@ -4,10 +4,10 @@ El proposito de este repositorio es realiza una miniApp solicitada para mostrar 
 
 
 # SetUp
-Prerequisitos:
- -Correctamente instalado PostgreSQL, Ruby 3.x y Ruby on Rails 7.x
+## Prerequisitos:
+- Correctamente instalado PostgreSQL, Ruby 3.x y Ruby on Rails 7.x
 
-Correr en terminal para actualizar gemas instaladas:
+- Correr en terminal para actualizar gemas instaladas:
 
 ```bash
 bundle install
