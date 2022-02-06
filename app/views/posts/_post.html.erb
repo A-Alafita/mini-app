@@ -13,5 +13,23 @@
   <strong>Image data:</strong>
   <%= image_tag post.image_url if post.image %>
 </p>
+<h2>Comments</h2>
+<% post.comment.each do |comment| %>
+  
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
 
+<h2>Add a comment:</h2>
+<%= form_for([post, post.comment.build]) do |f| %>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 </div>
